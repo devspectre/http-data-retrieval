@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}HTTP Data Retrieval and Decoding{% endblock %}
+{% block body %}
+<div id="root">
+    <div class="content">
+        <h1>{{description}}</h1>
+        <div>
+            <table>
+                <tr>
+                    <th>No.</th>
+                    <th style="text-align:left">ID</th>
+                    <th style="text-align:left">Name</th>
+                    <th></th>
+                </tr>
+                {% for route in routes %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{route.id}}</td>
+                    <td>{{route.name}}</td>
+                    <td><a href="/stops/by_route/{{route.id}}">Show stops</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

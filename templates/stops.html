@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}HTTP Data Retrieval and Decoding{% endblock %}
+{% block body %}
+<script type="text/javascript">
+    $(document).ready(function () {
+    });
+</script>
+<div id="root">
+    <div class="content">
+        <a href="/" style="font-size: 16px; font-weight: bold">Go back to all subway-lines</a>
+        <h1>{{description}}</h1>
+        <div>
+            <table>
+                <tr>
+                    <th>No.</th>
+                    <th style="text-align:left">ID</th>
+                    <th style="text-align:left">Name</th>
+                    <th style="text-align:left">Address</th>
+                    <th style="text-align:left">At Street</th>
+                    <th style="text-align:left">Description</th>
+                    <th style="text-align:left">Latitude</th>
+                    <th style="text-align:left">Longitude</th>
+                    <th style="text-align:left">Municipality</th>
+                    <th style="text-align:left">On Street</th>
+                    <th style="text-align:left">Platform Code</th>
+                    <th style="text-align:left">Vehicle Type</th>
+                    <th style="text-align:left">Wheelchair Boarding</th>
+                    <th></th>
+                </tr>
+                {% for stop in stops %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{stop.id}}</td>
+                    <td>{{stop.attributes.name}}</td>
+                    <td>{{stop.attributes.address}}</td>
+                    <td>{{stop.attributes.at_street}}</td>
+                    <td>{{stop.attributes.description}}</td>
+                    <td>{{stop.attributes.latitude}}</td>
+                    <td>{{stop.attributes.longitude}}</td>
+                    <td>{{stop.attributes.municipality}}</td>
+                    <td>{{stop.attributes.on_street}}</td>
+                    <td>{{stop.attributes.platform_code}}</td>
+                    <td>{{stop.attributes.vehicle_type}}</td>
+                    <td>{{stop.attributes.wheelchair_boarding}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
