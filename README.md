@@ -28,5 +28,6 @@ Then go to `127.0.0.1:5000` on your browser.
 
 # Screenshots
 The first page you see will show you all subway-lines in Boston.
-
+![image](https://user-images.githubusercontent.com/46239206/155015399-c8df1497-9470-4d5d-a1f0-201f463a8762.png)
 There you can navigate to another page by clicking the `Show stops` link which will show you all stops in that subway-line.
+![image](https://user-images.githubusercontent.com/46239206/155015515-1f140e3b-0b6e-4588-a315-f54cdb4c3d35.png)
