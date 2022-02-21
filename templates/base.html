@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="{% block description %}HTTP Data Retrieval and Decoding{% endblock %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        #root {
+            height: 100%;
+            width: 100%;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 2rem;
+        }
+
+        .details {
+            padding: 1rem;
+        }
+
+        table {
+            font-size: 12px;
+        }
+    </style>
+    {% block extra_style %}{% endblock %}
+</head>
+
+<body {% block body_tag_extras %}{% endblock %}>
+
+    {% block body %}{% endblock body %}
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>
